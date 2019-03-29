@@ -4,28 +4,30 @@
 using namespace std;
 using namespace sf;
 
-enum ShapeEnum { CIRCLE, SQUARE };
+enum ShapeEnum { CIRCLE, SQUARE};
 
-// finish this code; add functions, data as needed
 
 class SettingsMgr
 {
 private:
+	Color CurrentColor;
+	ShapeEnum CurrentShape;
 	
 public:
 	SettingsMgr(Color startingColor, ShapeEnum startingShape )
 	{
+		CurrentColor = startingColor;
+		CurrentShape = startingShape;
 	}
 
 	Color getCurColor()
 	{
-		return Color::Blue; // just to make it compile 
+		return CurrentColor;
 	}
-
 
 	ShapeEnum getCurShape()
 	{
-		return ShapeEnum::CIRCLE; // just to make it compile;
+		return CurrentShape;
 	}
 
 };

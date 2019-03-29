@@ -39,6 +39,7 @@ int main()
 			{
 				window.close();
 				// ****** Add code here to write all data to shapes file
+				shapeMgr.SaveDrawing();
 			}
 			else if (event.type == Event::MouseButtonReleased)
 			{
@@ -55,7 +56,8 @@ int main()
 				if (drawingUI.isMouseInCanvas(mousePos))
 				{
 					// add a shape to the list based on current settings
-					shapeMgr.addShape(mousePos, settingsMgr.getCurShape(), settingsMgr.getCurColor());
+					shapeMgr.addShape(mousePos, settingsMgr.getCurShape(), settingsMgr.getCurColor(), window);
+
 				}
 			}
 		}
